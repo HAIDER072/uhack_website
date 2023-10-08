@@ -39,7 +39,8 @@ app.post("/login", async(req, res) => {
              const userData = new User({
                 username: req.body.username,
                 email: req.body.email,
-                password: req.body.password
+                password: req.body.password,
+                who:req.body.who
             });
         const userdataRegister = await userData.save();
         // res.status(201).render('index');
