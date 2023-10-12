@@ -51,13 +51,18 @@ app.post("/login", async (req, res) => {
         const username = req.body.username;
         const who = req.body.who;
         const useremail = await User.findOne({ email: email });
-
+        if (!useremail) {
+            // User with the provided email does not exist
+            res.send("User not found");
+            return;
+        }
         if (useremail.password === password) {
             if (useremail.who == "user") {
+                
                 res.render('sos', { username: useremail.username });
             } else {
                 res.status(201).sendFile(path.join(static_path, 'index.html'));
-            }
+                }
         } else {
             res.send("Invalid login Details");
         }
