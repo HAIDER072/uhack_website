@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Ubuntu:ital@1&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    top: 0;
+    cursor: pointer;
+
+}
+.nav-list{
+    width: 100%;
+    background-color: #b1454a !important;
+    display: flex;
+    align-items: center; 
+}
+
+.logo{
+    margin-left: 10px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.logo::after{
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    height: 7px;
+    width: 50px;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+.logo:hover img{
+    transform: translateY(-10px);
+}
+.logo:hover::after{
+    opacity: 1;
+}
+
+.logo img{
+    width: 25%;
+    border-radius: 35px;
+}
+
+.nav-list li{
+    list-style: none; 
+    padding: 8px 16px;    
+}
+
+.nav-list li a{
+    text-decoration: none;  
+    color: white; 
+    font-size: 25px;
+    padding: 15px;
+}
+
+.nav-list li a:hover{
+    text-decoration: none;  
+    color: rgb(50, 9, 50); 
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7) url('images/bg.jpg');
+    background-size: cover;
+    background-blend-mode:darken;
+}
+
+.box-main{
+    padding: 34px 0px 0px 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 65%;
+    margin:auto;
+    height: 75%;
+}
+
+.fsec{
+    height:100vh;
+}
+
+.fhalf{
+    width:170%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shalf{
+    width:30%;
+}
+
+.shalf img{
+    width: 70%;
+    padding:10px 0px;
+}
+
+.heading{
+    font-size: 30px;
+    color: black;
+    padding-left: 80px;
+    font-size: xxx-large;
+    margin-right: 70px;
+}
+
+.h_info{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 12px;
+    text-align: center;
+    margin-right: 70px;
+}
+
+.ndrf{
+    display:flex;
+    max-width: 80%;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly; 
+    color:black;
+    padding: 18px 1px;
+    background-color: #fff0de;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+  
+.ndrfi img{
+    padding:20px 0px 0px;
+}
+
+.sdrf{
+    display:flex;
+    flex-direction: row-reverse;
+    max-width: 80%;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+    background-color: #b1454a;
+    color: white;
+    margin-right: 250px;
+    margin-top: 30px;
+    padding: 18px 1px;
+}
+
+.capf{
+    display:flex;
+    max-width: 80%;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+    color:black;
+    padding: 18px 1px;
+    background-color: #fff0de;
+    margin-left: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.capfi img{
+    padding: 0px 0px 25px 0px;
+}
+
+.para{
+    padding: 0px 65px;
+}
+
+.description {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+}
+
+.footer{
+    background-color: #b1454a;
+    padding: 8px;
+}
+.ftext{
+    display: flex;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 15px;
+}
+
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 3px;
+}
+
+@media only screen and (max-width:850px){
+    .nav-list{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+        background-color: #df4adf !important;
+    }
+    .burger{
+        display: block;
+    }
+    .navh-res{
+        height: 150px;
+    }
+    .vis-res{
+        opacity: 0;
+
+    }
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;    
+}

@@ -194,9 +194,35 @@ header {
 }
 
 /* About Us */
-.about_us {
-  height: 120vh;
+.chatroom {
+  height: 30vh;
   background-color: red;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+}
+
+.chatroom h1{
+  padding-bottom: 30px;
+  color: white;
+}
+
+.chatroom button{
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #000;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  cursor: pointer;
+}
+
+.chatroom button p{
+  color: #f1f1f1;
+  font-size: medium;
+}
+
+.chatroom button :hover{
+  color:antiquewhite
 }
 
 /* Contact Us */

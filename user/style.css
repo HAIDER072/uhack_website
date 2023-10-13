@@ -1,0 +1,78 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 80%;
+    background-image: url(bg.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+}
+
+.logo {
+    width: 140px;
+    height: 130px;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
+    top: 5px;
+}
+
+nav {
+    flex: 1;
+    padding-left: 280px;
+    position: relative;
+    top: -70px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+    font-size: 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #b1454a;
+}
+
+.content h1 {
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    position: relative;
+    left: -8px;
+}
+
+.content h2 {
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 24px;
+    margin-bottom: 15px;
+}
+
+.content h1 span {
+    color: white;
+}
+
+.content h2 span {
+    color: white;
+}
+
+.feature-img {
+    height: 90%;
+    position: relative;
+    top: -330px;
+    left: 800px;
+
+}
