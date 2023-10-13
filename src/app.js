@@ -61,7 +61,8 @@ app.post("/login", async (req, res) => {
                 
                 res.render('sos', { username: useremail.username });
             } else {
-                res.status(201).sendFile(path.join(static_path, 'index.html'));
+                // res.status(201).sendFile(path.join(static_path, 'index.html'));
+                res.render("main");
                 }
         } else {
             res.send("Invalid login Details");

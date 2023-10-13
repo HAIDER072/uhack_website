@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <video autoplay loop muted plays-inline class="bg_video">
+        <source src="./assets/Home/video (2160p).mp4" type="video/mp4" />
+      </video>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#" class="logo_a">
+            Tap <img src="./assets/Home/logo.png" alt="logo" class="logo_img" />
+            Away
+          </a>
+        </div>
+        <ul class="links">
+          <li><a href="#home" class="underline_effect">Home</a></li>
+          <!--<li>
+            <a href="#three_d_model" class="underline_effect">3D model</a>
+          </li>-->
+          <li><a href="../agency/agency.html" class="underline_effect">Agency</a></li>
+          <li><a href="../about_us/about_us.html" class="underline_effect">About Us</a></li>
+          <li><a href="#contact_us" class="underline_effect">Contact Us</a></li>
+        </ul>
+        <div class="login_btn">
+          <a href="./login.html" class="action_btn">Profile</a>
+        </div>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="dropdown_menu">
+          <li class="dropdown_menu_li"><a href="#home">Home</a></li>
+          <li class="dropdown_menu_li">
+            <a href="#three_d_model">3D model</a>
+          </li>
+          <li class="dropdown_menu_li"><a href="#about_us">About Us</a></li>
+          <li class="dropdown_menu_li"><a href="#contact_us">Contact Us</a></li>
+          <li class="dropdown_menu_li">
+            <a href="./login.html" class="action_btn login_btn">Profile</a>
+          </li>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="home">
+        <h1 class="home_h1">tapAway</h1>
+        <p>
+          Saving a life is just a tapaway.
+        </p>
+      </section>
+      <!-- <section id="three_d_model" class="three_d_model"></section> -->
+      <section id="chatroom" class="chatroom reveal">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="b">
+        </div>
+        <h1 class="chatroom_h">Connect with each other through our realtime chatroom.</h1>
+          <div class="">
+          <a href="#"></a><button><p>Connect now</p></button>
+        </div>
+        
+      </section>
+      <section id="contact_us" class="contact_us">
+        <div class="container">
+          <div class="left">
+            <div class="form_wrapper">
+              <div class="contact_heading">
+                <h1>Let's work together<span>.</span></h1>
+                <p class="text">
+                  Or reachus via :
+                  <a href="mailto:tapaway@gmail.com">tapaway@gmail.com</a>
+                </p>
+              </div>
+
+              <form action="index.html" method="post" class="contact_form">
+                <div class="input_wrap">
+                  <input
+                    class="contact_input"
+                    autocomplete="off"
+                    name="First name"
+                    type="text"
+                    required
+                  />
+                  <label>First Name</label>
+                  <i class="icon fa-solid fa-id-card"></i>
+                </div>
+
+                <div class="input_wrap">
+                  <input
+                    class="contact_input"
+                    autocomplete="off"
+                    name="Last name"
+                    type="text"
+                    required
+                  />
+                  <label>Last Name</label>
+                  <i class="icon fa-solid fa-id-card"></i>
+                </div>
+
+                <div class="input_wrap w-100">
+                  <input
+                    class="contact_input"
+                    autocomplete="off"
+                    name="Email"
+                    type="email"
+                    required
+                  />
+                  <label>Email</label>
+                  <i class="icon fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="input_wrap textarea w-100">
+                  <textarea
+                    name="Message"
+                    autocomplete="off"
+                    class="contact_input"
+                    required
+                  >
+                  </textarea>
+                  <label>Message</label>
+                  <i class="icon fa-solid fa-inbox"></i>
+                </div>
+
+                <div class="contact_button w-100">
+                  <button class="btn upload">
+                    <span>
+                      <i class="fa-solid fa-paperclip"></i> Add attachment
+                    </span>
+                    <input type="file" name="attachment" />
+                  </button>
+                  <input type="submit" value="Send message" class="btn" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="right">
+            <div class="image_wrapper">
+              <img src="./assets/Home/rescue_man.jpg" class="img" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+
+      function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+
+          for(var i=0; i< reveals.length; i++){
+              var windowheight = window.innerHeight;
+              var revealtop = reveals[i].getBoundingClientRect().top;
+              var revealpoint = 150; 
+              
+              if(revealtop < windowheight-revealpoint){
+                  reveals[i].classList.add('active');    
+              }
+              else{
+                  reveals[i].classList.remove('active');    
+              }
+          }
+      }
+  </script>  
+  </body>
+</html>
