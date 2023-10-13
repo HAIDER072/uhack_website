@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TapAway</title>
+</head>
+<body>
+    <nav class="navbar background navh-res">
+        <ul class="nav-list vis-res">
+            <div class="logo"><img src="images/logo.jpg" alt=""></div>
+            <li><a href="#" class="nav-link px-3 text-white">Home</a></li>
+            <li><a href="..\about_us\about_us.html" class="nav-link px-3 text-white">About us</a></li>
+            <li><a href="..\agency\agency.html" class="nav-link px-3 text-white">Agencies</a></li>
+            <li><a href="..\contact_us\contact_us.html" class="nav-link px-3 text-white">Contact Us</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>  
+    
+    <section class="background fsec">
+        <div class="box-main">
+            <div class="fhalf reveal">
+                <p class="heading" style="color:white;">Agencies connected with us</p>
+                <p class="h_info">The National Disaster Management Authority (NDMA) is a critical governmental 
+                    organization tasked with disaster preparedness, mitigation, and management in India. Established 
+                    in 2005, it operates under the aegis of the Ministry of Home Affairs. NDMA plays a pivotal role 
+                    in formulating policies, coordinating efforts, and ensuring a comprehensive and effective response
+                     to natural and man-made disasters across the country. It works in collaboration with state-level 
+                     disaster management authorities and various stakeholders to enhance disaster resilience, develop strategies,
+                      and provide guidance for disaster risk reduction. NDMA's mission is to create a safer and more resilient 
+                      India by promoting a culture of disaster preparedness and proactive response measures.
+                </p>
+            </div>
+            <div class="shalf">
+                <!-- <div class="random"><img src="images/ndma_logo.png" alt=""></div> -->
+            </div>
+        </div>
+    </section>
+    <section class="description">
+        <div class="ndrf reveal">
+            <div class="para">
+            <p class="ndrfh heading">National Disaster Response Force (NDRF)</p>
+            <p class="ndrfm h_info">
+                The National Disaster Response Force (NDRF) is a specialized paramilitary force in India that is 
+                dedicated to responding to natural and man-made disasters. It plays a crucial role in disaster 
+                management, rescue operations, and relief efforts across the country.
+            </p>
+            </div>
+            <div class="ndrfi"><img src="images/ndrf_logo.png" alt=""></div>
+        </div>
+        <div class="sdrf reveal">
+            <div class="para">
+            <p class="sdrfh heading">State Disaster Response Force (SDRF) </p>
+            <p class="sdrfm h_info">
+                The SDRF is a specialized force established by individual states and union territories in India to respond
+                to disasters and emergency situations at the state level. Each state and union territory has its own SDRF,
+                which operates under the overall guidance and coordination of the National Disaster Response Force (NDRF)
+                and the National Disaster Management Authority (NDMA).
+            </p>
+            </div>
+            <div class="sdrfi"><img src="images/sdrf_logo.png" alt=""></div>
+        </div>
+        <div class="capf reveal">
+            <div class="para">
+            <p class="capfh heading">Central Armed Police Forces (CAPFs)</p>
+            <p class="capfm h_info">
+                CAPF stands for "Central Armed Police Forces," which is a collective term used to refer to 
+                various paramilitary forces and security organizations in India. These forces are under the jurisdiction of
+                the Ministry of Home Affairs, Government of India, and they play a crucial role in maintaining internal 
+                security, assisting in disaster management, and providing support during emergencies.
+            </p>
+            </div>
+            <div class="capfi"><img src="images/capf_logo.png" alt=""></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="ftext">
+            Copyright &copy; 2023 www.tapAway.com -All rights reserved
+        </p>
+    </footer>
+    <script src="js/resp.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i=0; i< reveals.length; i++){
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150; 
+                
+                if(revealtop < windowheight-revealpoint){
+                    reveals[i].classList.add('active');    
+                }
+                else{
+                    reveals[i].classList.remove('active');    
+                }
+            }
+        }
+    </script>
+</body>
+</html>
