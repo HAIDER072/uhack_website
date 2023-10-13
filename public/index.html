@@ -59,17 +59,23 @@
 
     <main>
       <section id="home" class="home">
-        <h1 class="home_h1">Tap Away</h1>
+        <h1 class="home_h1">tapAway</h1>
         <p>
           Saving a life is just a tapaway.
         </p>
       </section>
-      <section id="three_d_model" class="three_d_model"></section>
-      <section id="chatroom" class="chatroom">
+      <!-- <section id="three_d_model" class="three_d_model"></section> -->
+      <section id="chatroom" class="chatroom reveal">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="b">
+        </div>
         <h1 class="chatroom_h">Connect with each other through our realtime chatroom.</h1>
-        <div class="">
+          <div class="">
           <a href="#"></a><button><p>Connect now</p></button>
         </div>
+        
       </section>
       <section id="contact_us" class="contact_us">
         <div class="container">
@@ -154,5 +160,25 @@
     </main>
 
     <script src="./script.js"></script>
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+
+      function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+
+          for(var i=0; i< reveals.length; i++){
+              var windowheight = window.innerHeight;
+              var revealtop = reveals[i].getBoundingClientRect().top;
+              var revealpoint = 150; 
+              
+              if(revealtop < windowheight-revealpoint){
+                  reveals[i].classList.add('active');    
+              }
+              else{
+                  reveals[i].classList.remove('active');    
+              }
+          }
+      }
+  </script>  
   </body>
 </html>
