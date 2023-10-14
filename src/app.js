@@ -3,6 +3,12 @@ const app = express();
 const path = require("path");
 const dotenv = require("dotenv");
 const hbs = require("hbs");
+const http = require('http');
+const socketio = require('socket.io');
+const formatMessage = require('../utils/messages');
+const {userJoin, getCurrentUser,userLeave,getRoomUsers} = require('../utils/users');
+const server = http.createServer(app);
+const io = socketio(server);
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const port = process.env.PORT || 3000;
@@ -118,8 +124,67 @@ const getPhoneNumbers = async () => {
         return [];
     }
 };
+app.get("/chatroom",(req, res)=> {
+    res.render("chatroom")
+})
+// chatroom
+const botName = 'ChatCord Bot';
 
-app.listen(port, () => {
+//run when client connects
+io.on('connection', socket => {
+    socket.on('joinRoom', ({ username, room }) => {
+        const user = userJoin(socket.id, username, room);
+
+        socket.join(user.room);
+
+        //welcome current user
+        socket.emit('message', formatMessage(botName, 'Welcome to our chatroom!'));
+
+        //broadcast when a user connects
+        socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the chat`));
+
+        //send users and room info
+        io.to(user.room).emit('roomUsers', {
+            room: user.room,
+            users: getRoomUsers(user.room)    
+        });
+    });
+
+    console.log('New WS Connection...');
+
+    //listen for chatMessage
+    socket.on('chatMessage', msg => {
+        const user = getCurrentUser(socket.id);
+
+        io.to(user.room).emit('message',formatMessage(user.username,msg));
+    });
+
+    //runs when client disconnects
+    socket.on('disconnect', () => {
+        const user = userLeave(socket.id);
+
+        if(user){
+            io.to(user.room).emit('message', formatMessage(botName,`${user.username} has left the chat`));
+
+            //send users and room info
+            io.to(user.room).emit('roomUsers', {
+                room: user.room,
+                users: getRoomUsers(user.room)    
+            });
+        }    
+    });
+});
+app.get("/main", (req, res) => {
+    res.render("main");
+})
+
+
+
+
+
+
+
+server.listen(port, () => {
     console.log(`server is running at port no. ${port}`)
 })
 
