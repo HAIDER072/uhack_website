@@ -2,6 +2,9 @@
 # Welcome to TapAway
 # TapAway Login Page
 
+![Alt text](<Website - Google Chrome 17-10-2023 21_06_20-1.png>)
+* data stored in MongoDB Atlas
+
 Welcome to TapAway, your comprehensive disaster management solution. In times of crisis, you need a reliable and swift way to share your location, send emergency messages, and call your loved ones or rescue agencies. With TapAway, we've got you covered.
 
 # About TapAway
@@ -19,15 +22,15 @@ TapAway is your lifeline when disaster strikes. We provide a straightforward sol
 
 ## TapAway User Page
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_07_52.png>)
+![Alt text](<Website - Google Chrome 17-10-2023 21_07_52-1.png>)
 
 
 * Chat Room Service (Exclusively for Authorities): This chat room allows authorities to communicate seamlessly with other rescue agencies to coordinate a faster and more effective response to disasters.
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_08_34.png>)
+![Alt text](<Website - Google Chrome 17-10-2023 21_08_34-1.png>)
 
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_08_43-1.png>)
+![Alt text](<Website - Google Chrome 17-10-2023 21_08_43-2.png>)
 
 
 How to Use TapAway
