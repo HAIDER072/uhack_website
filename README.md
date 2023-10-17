@@ -1,5 +1,9 @@
 ## TapAway - Disaster Management Solution
 # Welcome to TapAway
+
+![Alt text](<Website - Google Chrome 17-10-2023 21_05_56.png>)
+
+
 # TapAway Login Page
 
 ![Alt text](<Website - Google Chrome 17-10-2023 21_06_20-1.png>)
