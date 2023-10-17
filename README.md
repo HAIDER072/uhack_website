@@ -1,12 +1,14 @@
 ## TapAway - Disaster Management Solution
 # Welcome to TapAway
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_05_56.png>)
+![Website - Google Chrome 17-10-2023 21_05_56](https://github.com/HAIDER072/uhack_website/assets/119747109/dbb360ba-6ccb-49a1-9ccc-e827f17a2945)
+
 
 
 # TapAway Login Page
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_06_20-1.png>)
+![Website - Google Chrome 17-10-2023 21_06_20](https://github.com/HAIDER072/uhack_website/assets/119747109/e8f6efe9-a08a-4355-badc-834d00d6d6d8)
+
 * data stored in MongoDB Atlas
 
 Welcome to TapAway, your comprehensive disaster management solution. In times of crisis, you need a reliable and swift way to share your location, send emergency messages, and call your loved ones or rescue agencies. With TapAway, we've got you covered.
@@ -26,15 +28,18 @@ TapAway is your lifeline when disaster strikes. We provide a straightforward sol
 
 ## TapAway User Page
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_07_52-1.png>)
+![Website - Google Chrome 17-10-2023 21_07_52](https://github.com/HAIDER072/uhack_website/assets/119747109/b8e0fdb2-cbc8-4bbf-b412-59fd67d06c7f)
+
 
 
 * Chat Room Service (Exclusively for Authorities): This chat room allows authorities to communicate seamlessly with other rescue agencies to coordinate a faster and more effective response to disasters.
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_08_34-1.png>)
+
+![Website - Google Chrome 17-10-2023 21_08_34](https://github.com/HAIDER072/uhack_website/assets/119747109/d44a3e94-56b0-44f6-81f6-db9e16654de5)
 
 
-![Alt text](<Website - Google Chrome 17-10-2023 21_08_43-2.png>)
+
+![Website - Google Chrome 17-10-2023 21_08_43](https://github.com/HAIDER072/uhack_website/assets/119747109/5419f58c-c9de-4839-83d7-09b9fc88cf1e)
 
 
 How to Use TapAway
