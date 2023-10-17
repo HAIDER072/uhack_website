@@ -36,7 +36,13 @@ app.get("/login", (req, res) => {
 })
 
 app.post("/sign_up", async (req, res) => {
-    try {
+        try {
+            // Check if the email already exists
+            const existingUser = await User.findOne({ email: req.body.email });
+            if (existingUser) {
+                // If the email exists, return an error response
+                return res.status(400).send("Email already exists. Please use a different email.");
+            }
         const userData = new User({
             username: req.body.username,
             email: req.body.email,
