@@ -1,6 +1,6 @@
-## TapAway - Disaster Management Solution
-## Welcome to TapAway
-## TapAway Login Page
+### TapAway - Disaster Management Solution
+# Welcome to TapAway
+# TapAway Login Page
 
 Welcome to TapAway, your comprehensive disaster management solution. In times of crisis, you need a reliable and swift way to share your location, send emergency messages, and call your loved ones or rescue agencies. With TapAway, we've got you covered.
 
